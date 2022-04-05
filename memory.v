@@ -1,4 +1,4 @@
-
+//Buffer
 module Buff(y,x,op);
 input y;
 input [5:0] x;
@@ -8,7 +8,7 @@ if(y == 1)
 assign op =x;
 endmodule
 
-
+// 2*4 Decoder
 module Dec(a,y);
 input [1:0] a;
 output  [3:0]y;
@@ -18,6 +18,7 @@ assign y[2] = (a[1])&(~a[0]);
 assign y[3] = (a[1])&(a[0]); 
 endmodule
 
+//Register
 module Register(ld,clk,in,x);
 input ld,clk;
 input [5:0]in;
@@ -27,7 +28,7 @@ if (ld ==1)
 assign x = in;
 endmodule
 
-
+//Main Module
 module Assignment(sel,memin,memout,clk,ld);
 input[1:0] sel;
 input [5:0] memin;
